@@ -159,4 +159,18 @@ public class MultiplicationTableTest {
         //then
         assertEquals("2*2=4", actual);
     }
+
+    @Test
+    void should_return_null_when_multiply_given_start_number_negativeOne_end_number_1000() {
+        //given
+        MultiplicationTable multiplicationTable = new MultiplicationTable();
+        int start = -1;
+        int end = 1000;
+
+        //when
+        String actual = multiplicationTable.create(start, end);
+
+        //then
+        assertNull(actual);
+    }
 }
