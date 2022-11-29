@@ -18,7 +18,16 @@ public class MultiplicationTable {
     }
 
     public String generateTable(int start, int end) {
-        return null;
+        String table = "";
+        for(int row = start; row <= end; row++) {
+            if(row == end){
+                table = table + generateLine(start, row);
+            }else{
+                table = table + generateLine(start, row) + System.lineSeparator();
+            }
+        }
+
+        return table;
     }
 
     public String generateLine(int start, int row) {
